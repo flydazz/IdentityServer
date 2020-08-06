@@ -29,7 +29,7 @@ namespace IdentityServer
         {
             return new List<ApiScope>
             {
-                new ApiScope("Api1", "my api1"),
+                new ApiScope("api1", "my api1"),
             };
         }
         public static IEnumerable<Client> GetClients()
@@ -44,7 +44,7 @@ namespace IdentityServer
                          new Secret("secret".Sha256())
                      },
                      AllowedGrantTypes = GrantTypes.ClientCredentials,
-                     AllowedScopes = new string[]{ "Api1" }
+                     AllowedScopes = new string[]{ "api1" }
                 },
                  new Client()
                 {
@@ -54,7 +54,7 @@ namespace IdentityServer
                          new Secret("secret".Sha256())
                      },
                      AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-                     AllowedScopes = new string[]{ "Api1" }
+                     AllowedScopes = new string[]{ "api1" }
                 }
             };
         }
